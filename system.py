@@ -33,6 +33,25 @@ def rule_gastroenteritis(symptoms):
 def rule_stroke(symptoms):
     return 'numbness_weakness' in symptoms or 'confusion' in symptoms or 'trouble_speaking' in symptoms
 
+def get_yes_no(question):
+    while True:
+        answer = input(question + " (y/n): ").strip().lower()
+        if answer in ['y', 'yes']:
+            return True
+        elif answer in ['n', 'no']:
+            return False
+        else:
+            print("Please answer with 'y' or 'n'")
+
+
+def collect_symptoms():
+    symptoms = []
+    for question, symptom in questions:
+        if get_yes_no(question):
+            symptoms.append(symptom)
+    return symptoms
+
+
 def welcome_message():
     print("=" * 60)
     print("      Welcome to the Medical Diagnosis System      ")
