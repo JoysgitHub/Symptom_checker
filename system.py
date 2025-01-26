@@ -1,16 +1,17 @@
-import tkinter as tk
-
-symptom1 = input("Symptom1 > ")
-symptom2 = input("Symptom2 > ")
-symptom3 = input("Symptom3 > ")
-
-
-print(f"{symptom1}, {symptom2}, {symptom3}")
-
-
-
-root = tk.Tk()
-root.title("Symptom Checker")
-root.geometry("400x300") 
-
-root.mainloop()
+questions = [
+    ('Are you wheezing?', 'wheezing'),                          
+    ('Are you short of breath?', 'breathlessness'),             
+    ('Do you have chest tightness?', 'chest_tightness'),       
+    ('Do you have a high temperature?', 'high_temp'),          
+    ('Do you have chest pain?', 'chest_pain'),                 
+    ('Are you coughing?', 'cough'),                             
+    ('Do you have joint pain?', 'joint_pain'),                 
+    ('Do you have stiffness?', 'stiffness'),                   
+    ('Do you have swelling?', 'swelling'),                     
+    ('Do you have diarrhea?', 'diarrhea'),                      
+    ('Are you vomiting?', 'vomiting'),                          
+    ('Do you have nausea?', 'nausea'),                          
+    ('Do you have numbness or weakness?', 'numbness_weakness'), 
+    ('Are you confused?', 'confusion'),                         
+    ('Do you have trouble speaking?', 'trouble_speaking'),     
+]
