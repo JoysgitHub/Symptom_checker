@@ -45,16 +45,62 @@ def rule_asthma(symptoms):
     return 'wheezing' in symptoms or 'breathlessness' in symptoms or 'chest_tightness' in symptoms
 
 def rule_pneumonia(symptoms):
-    return 'high_temp' in symptoms or 'chest_pain' in symptoms or 'cough' in symptoms
+    return 'chest_pain' in symptoms or 'cough' in symptoms or 'shortness_of_breath' in symptoms
 
 def rule_arthritis(symptoms):
-    return 'joint_pain' in symptoms or 'stiffness' in symptoms or 'swelling' in symptoms
+    return 'joint_pain' in symptoms or 'stiffness' in symptoms or 'limited_mobility' in symptoms
 
 def rule_gastroenteritis(symptoms):
-    return 'diarrhea' in symptoms or 'vomiting' in symptoms or 'nausea' in symptoms
+    return 'diarrhea' in symptoms or 'vomiting' in symptoms or 'abdominal_cramps' in symptoms
 
 def rule_stroke(symptoms):
-    return 'numbness_weakness' in symptoms or 'confusion' in symptoms or 'trouble_speaking' in symptoms
+    return 'numbness' in symptoms or 'confusion' in symptoms or 'difficulty_walking' in symptoms
+
+def rule_flu(symptoms):
+    return 'high_temp' in symptoms or 'chills' in symptoms or 'fatigue' in symptoms
+
+def rule_allergies(symptoms):
+    return 'runny_nose' in symptoms or 'itchy_eyes' in symptoms or 'sneezing' in symptoms
+
+def rule_diabetes(symptoms):
+    return 'excessive_thirst' in symptoms or 'fatigue' in symptoms or 'blurred_vision' in symptoms
+
+def rule_heart_disease(symptoms):
+    return 'chest_discomfort' in symptoms or 'shortness_of_breath' in symptoms or 'fatigue' in symptoms
+
+def rule_kidney_infection(symptoms):
+    return 'flank_pain' in symptoms or 'frequent_urination' in symptoms or 'nausea' in symptoms
+
+def rule_urinary_tract_infection(symptoms):
+    return 'burning_sensation' in symptoms or 'frequent_urination' in symptoms or 'pelvic_pain' in symptoms
+
+def rule_migraine(symptoms):
+    return 'throbbing_headache' in symptoms or 'nausea' in symptoms or 'sensitivity_to_light' in symptoms
+
+def rule_gout(symptoms):
+    return 'intense_joint_pain' in symptoms or 'swelling' in symptoms or 'redness' in symptoms
+
+def rule_depression(symptoms):
+    return 'persistent_sadness' in symptoms or 'loss_of_interest' in symptoms or 'changes_in_appetite' in symptoms
+
+def rule_hypertension(symptoms):
+    return 'headache' in symptoms or 'nosebleeds' in symptoms or 'blurred_vision' in symptoms
+
+def rule_anemia(symptoms):
+    return 'fatigue' in symptoms or 'pale_skin' in symptoms or 'shortness_of_breath' in symptoms
+
+def rule_appendicitis(symptoms):
+    return 'abdominal_pain' in symptoms or 'nausea' in symptoms or 'loss_of_appetite' in symptoms
+
+def rule_chickenpox(symptoms):
+    return 'itchy_rash' in symptoms or 'fatigue' in symptoms or 'blisters' in symptoms
+
+def rule_menstrual_disorders(symptoms):
+    return 'abdominal_cramps' in symptoms or 'irregular_periods' in symptoms or 'mood_swings' in symptoms
+
+def rule_panic_attack(symptoms):
+    return 'rapid_heartbeat' in symptoms or 'dizziness' in symptoms or 'feeling_of_doom' in symptoms
+
 
 def get_yes_no(question):
     while True:
