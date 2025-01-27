@@ -1,6 +1,7 @@
 ##################################################
 ## Questionnaire Style Medical Diagnosis System ##
 ##################################################
+# To run the system use: python3 system.py
 
 # Question bank to print and get response from user
 questions = [
