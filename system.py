@@ -3,42 +3,36 @@ questions = [
     ('2. Are you having difficulty breathing?', 'breathlessness'),
     ('3. Do you feel a tightness in your chest?', 'chest_discomfort'),
     ('4. Are you experiencing sharp or persistent pain in your chest?', 'chest_pain'),
-    ('5. Is your cough dry or productive?', 'cough'),
+    ('5. Is your cough dry or persistent?', 'cough'),
     ('6. Have you noticed a wheezing sound when you breathe?', 'wheezing'),
     ('7. Do you feel unusually cold or have episodes of shivering?', 'chills'),
     ('8. Are you feeling more fatigued than usual?', 'fatigue'),
     ('9. Have you experienced sudden numbness in your face, arms, or legs?', 'numbness'),
     ('10. Are you having trouble concentrating or feeling disoriented?', 'confusion'),
-    ('11. Do you find it difficult to articulate your thoughts?', 'trouble_speaking'),
     ('12. Have you had frequent episodes of loose or watery stools?', 'diarrhea'),
     ('13. Are you experiencing persistent nausea?', 'nausea'),
     ('14. Have you been vomiting recently?', 'vomiting'),
     ('15. Have you had any recent stomach pain?', 'abdominal_pain'),
-    ('16. Is your throat sore or painful when swallowing?', 'sore_throat'),
-    ('17. Have you noticed any unusual rashes or spots on your skin?', 'rash'),
-    ('18. Are you feeling excessively thirsty?', 'excessive_thirst'),
-    ('19. Have you noticed swelling in your legs or ankles?', 'swelling'),
-    ('20. Are you experiencing pain in your joints?', 'joint_pain'),
-    ('21. Do you feel stiffness in your joints?', 'stiffness'),
-    ('22. Have you been sneezing frequently?', 'sneezing'),
-    ('23. Is your nose often congested?', 'runny_nose'),
-    ('24. Are your eyes itchy or watery?', 'itchy_eyes'),
-    ('25. Are you experiencing muscle soreness or aches?', 'muscle_aches'),
-    ('26. Do you feel dizzy or lightheaded?', 'dizziness'),
-    ('27. Have you been experiencing persistent pain in your lower back?', 'back_pain'),
-    ('28. Have you noticed any changes in your menstrual cycle?', 'menstrual_disorders'),
-    ('29. Are you feeling persistently sad?', 'persistent_sadness'),
-    ('30. Have you lost interest or pleasure in activities you once enjoyed?','loss_of_interest'),
-    ('31. Do you experience a rapid heartbeat?', 'rapid_heartbeat'),
-    ('32. Are you experiencing frequent headaches?', 'headache'),
-    ('33. Do you feel chest discomfort or shortness of breath?', 'shortness_of_breath'),
-    ('34. Are you experiencing flank pain?', 'flank_pain'),
-    ('36. Do you feel a burning sensation when urinating?', 'burning_sensation'),
-    ('36. Have you noticed any blisters on your skin?', 'blisters'),
-    ('37. Have you noticed any itchy rashes on your skin?', 'itchy_rash'),
-    ('38. Are you experiencing a throbbing headache?', 'throbbing_headache'),
-]
-
+    ('16. Are you feeling excessively thirsty?', 'excessive_thirst'),
+    ('17. Have you noticed any blurriness in your vision?', 'blurred_vision'),
+    ('18. Are you experiencing pain in your joints?', 'joint_pain'),
+    ('19. Do you feel stiffness in your joints?', 'stiffness'),
+    ('20. Have you been sneezing frequently?', 'sneezing'),
+    ('21. Is your nose often congested?', 'runny_nose'),
+    ('22. Are you feeling persistently sad?', 'persistent_sadness'),
+    ('23. Have you lost interest or pleasure in activities you once enjoyed?', 'loss_of_interest'),
+    ('24. Do you experience a rapid heartbeat?', 'rapid_heartbeat'),
+    ('25. Are you experiencing frequent headaches?', 'headache'),
+    ('26. Do you feel chest discomfort or shortness of breath?', 'shortness_of_breath'),
+    ('27. Are you experiencing flank pain?', 'flank_pain'),
+    ('28. Do you feel a burning sensation when urinating?', 'burning_sensation'),
+    ('29. Have you noticed any blisters on your skin?', 'blisters'),
+    ('30. Have you noticed any itchy rashes on your skin?', 'itchy_rash'),
+    ('31. Are you experiencing a throbbing headache?', 'throbbing_headache'),
+    ('32. Do you find yourself needing to urinate more often than usual?', 'frequent_urination'),
+    ('33. Are you experiencing increased sensitivity to light?', 'sensitivity_to_light'),
+    ('34. Do you feel dizzy or lightheaded?', 'dizziness')
+    ]
 
 
 def rule_asthma(symptoms):
@@ -57,7 +51,8 @@ def rule_stroke(symptoms):
     return 'numbness' in symptoms or 'confusion' in symptoms
 
 def rule_flu(symptoms):
-    return 'high_temp' in symptoms or 'fatigue' in symptoms
+    return 'high_temp' in symptoms or 'fatigue' in symptoms or 'chills' in symptoms
+
 
 def rule_allergies(symptoms):
     return 'runny_nose' in symptoms or 'sneezing' in symptoms
