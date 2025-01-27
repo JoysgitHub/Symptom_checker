@@ -95,7 +95,26 @@ def rule_chickenpox(symptoms):
 def rule_panic_attack(symptoms):
     return 'rapid_heartbeat' in symptoms or 'dizziness' in symptoms
 
-
+replies = {
+    'Asthma': 'You may have asthma. Consult your doctor for inhalers and management.',
+    'Pneumonia': 'You may have pneumonia. See a doctor for tests and antibiotics.',
+    'Arthritis': 'You may have arthritis. Consult a rheumatologist for treatment options.',
+    'Gastroenteritis': 'You may have gastroenteritis. Stay hydrated and see a doctor if symptoms worsen.',
+    'Stroke': 'A stroke is a medical emergency. Seek immediate medical attention.',
+    'Flu': 'You may have the flu. Rest, hydrate, and consult your doctor if symptoms worsen.',
+    'Allergies': 'You may have an allergy. Antihistamines may help; consult a doctor for evaluation.',
+    'Diabetes': 'You may have diabetes. Consult an endocrinologist for diagnosis and treatment.',
+    'Heart Disease': 'Heart disease is serious. Consult a cardiologist for further evaluation.',
+    'Kidney Infection': 'A kidney infection requires medical attention. Seek a doctor immediately.',
+    'Urinary Tract Infection': 'You may have a UTI. See a doctor for treatment and antibiotics.',
+    'Migraine': 'You may have a migraine. Over-the-counter pain relief may help; consult a doctor if frequent.',
+    'Depression': 'Depression is serious. Consult a mental health professional for support.',
+    'Hypertension': 'Hypertension needs management. Consult a doctor for a treatment plan.',
+    'Anemia': 'Anemia is treatable. Consult a doctor for diagnosis and treatment options.',
+    'Appendicitis': 'Appendicitis is an emergency. Seek medical attention immediately.',
+    'Chickenpox': 'Chickenpox is contagious. Rest and consult a doctor if necessary.',
+    'Panic Attack': 'Panic attacks can be managed. Consult a mental health professional for guidance.'
+}
 
 def get_yes_no(question):
     while True:
