@@ -111,6 +111,28 @@ replies = {
     'Panic Attack': 'Panic attacks can be managed. Consult a mental health professional for guidance.'
 }
 
+
+replies = {
+    'Asthma': 'You may have asthma. Consult your doctor for inhalers and management.',
+    'Pneumonia': 'You may have pneumonia. See a doctor for tests and antibiotics.',
+    'Arthritis': 'You may have arthritis. Consult a rheumatologist for treatment options.',
+    'Gastroenteritis': 'You may have gastroenteritis. Stay hydrated and see a doctor if symptoms worsen.',
+    'Stroke': 'A stroke is a medical emergency. Seek immediate medical attention.',
+    'Flu': 'You may have the flu. Rest, hydrate, and consult your doctor if symptoms worsen.',
+    'Allergies': 'You may have an allergy. Antihistamines may help; consult a doctor for evaluation.',
+    'Diabetes': 'You may have diabetes. Consult an endocrinologist for diagnosis and treatment.',
+    'Heart Disease': 'Heart disease is serious. Consult a cardiologist for further evaluation.',
+    'Kidney Infection': 'A kidney infection requires medical attention. Seek a doctor immediately.',
+    'Urinary Tract Infection': 'You may have a UTI. See a doctor for treatment and antibiotics.',
+    'Migraine': 'You may have a migraine. Over-the-counter pain relief may help; consult a doctor if frequent.',
+    'Depression': 'Depression is serious. Consult a mental health professional for support.',
+    'Hypertension': 'Hypertension needs management. Consult a doctor for a treatment plan.',
+    'Anemia': 'Anemia is treatable. Consult a doctor for diagnosis and treatment options.',
+    'Appendicitis': 'Appendicitis is an emergency. Seek medical attention immediately.',
+    'Chickenpox': 'Chickenpox is contagious. Rest and consult a doctor if necessary.',
+    'Panic Attack': 'Panic attacks can be managed. Consult a mental health professional for guidance.'
+}
+
 def get_yes_no(question):
     while True:
         answer = input(question + " (y/n): ").strip().lower()
@@ -119,8 +141,7 @@ def get_yes_no(question):
         elif answer in ['n', 'no']:
             return False
         else:
-            print("Please answer with 'y' or 'n'")
-
+            print("Please answer with 'y' or 'n'.")
 
 def collect_symptoms():
     symptoms = []
@@ -129,7 +150,6 @@ def collect_symptoms():
             symptoms.append(symptom)
     return symptoms
 
-
 def welcome_message():
     print("=" * 60)
     print("      Welcome to the Medical Diagnosis System      ")
@@ -137,13 +157,34 @@ def welcome_message():
     print("  Your health is our priority. Let's get started!  ")
     print("=" * 60)
 
+def diagnose(symptoms):
+    possible_diagnoses = []
+    print('\n')
+    for illness, explanation, condition in rules:
+        if condition(symptoms):
+            possible_diagnoses.append((illness, explanation))
+
+    if possible_diagnoses:
+        print("=" * 60)
+        print("Possible Diagnoses and Recommendations:\n")
+        for illness, explanation in possible_diagnoses:
+            print("=" * 60)
+            print(f"Disease: {illness}")
+            print(f"Reason: {explanation}")
+            print(f"Recommendation: {replies[illness]}")
+    else:
+        print("=" * 60)
+        print("No matching conditions found. Please consult a doctor for further examination.")
+
+
+        print("=" * 60)
 
 def main():
     welcome_message()
-    print('\n')
     symptoms = collect_symptoms()
     diagnose(symptoms)
 
 if __name__ == "__main__":
     main()
+
 
