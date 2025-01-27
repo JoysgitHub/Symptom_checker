@@ -94,29 +94,29 @@ def rule_chickenpox(symptoms):
 def rule_panic_attack(symptoms):
     return 'rapid_heartbeat' in symptoms or 'dizziness' in symptoms
 
+# 
+rules = [
+    ('Asthma', 'Wheezing and breathlessness are symptoms of asthma.', rule_asthma),
+    ('Pneumonia', 'Chest pain and cough are symptoms of pneumonia.', rule_pneumonia),
+    ('Arthritis', 'Joint pain and stiffness are symptoms of arthritis.', rule_arthritis),
+    ('Gastroenteritis', 'Diarrhea and vomiting are symptoms of gastroenteritis.', rule_gastroenteritis),
+    ('Stroke', 'Numbness and confusion may indicate a stroke.', rule_stroke),
+    ('Flu', 'High temperatur, chills, and fatigue are symptoms of the flu.', rule_flu),
+    ('Allergies', 'Runny nose and sneezing are symptoms of allergies.', rule_allergies),
+    ('Diabetes', 'Excessive thirst and fatigue may indicate diabetes.', rule_diabetes),
+    ('Heart Disease', 'Chest discomfort and shortness of breath may indicate heart disease.', rule_heart_disease),
+    ('Kidney Infection', 'Flank pain and frequent urination are symptoms of a kidney infection.', rule_kidney_infection),
+    ('Urinary Tract Infection', 'Burning sensation and frequent urination may indicate a UTI.', rule_urinary_tract_infection),
+    ('Migraine', 'Throbbing headache and sensitivity to light are symptoms of a migraine.', rule_migraine),
+    ('Depression', 'Persistent sadness and loss of interest may indicate depression.', rule_depression),
+    ('Hypertension', 'Headache and blurred vision may indicate hypertension.', rule_hypertension),
+    ('Anemia', 'Fatigue and shortness of breath are symptoms of anemia.', rule_anemia),
+    ('Appendicitis', 'Abdominal pain and nausea may indicate appendicitis.', rule_appendicitis),
+    ('Chickenpox', 'Itchy rash and blisters are symptoms of chickenpox.', rule_chickenpox),
+    ('Panic Attack', 'Rapid heartbeat and dizziness.', rule_panic_attack)
+]
+
 # Replies based on the diagnosis
-replies = {
-    'Asthma': 'You may have asthma. Consult your doctor for inhalers and management.',
-    'Pneumonia': 'You may have pneumonia. See a doctor for tests and antibiotics.',
-    'Arthritis': 'You may have arthritis. Consult a rheumatologist for treatment options.',
-    'Gastroenteritis': 'You may have gastroenteritis. Stay hydrated and see a doctor if symptoms worsen.',
-    'Stroke': 'A stroke is a medical emergency. Seek immediate medical attention.',
-    'Flu': 'You may have the flu. Rest, hydrate, and consult your doctor if symptoms worsen.',
-    'Allergies': 'You may have an allergy. Antihistamines may help; consult a doctor for evaluation.',
-    'Diabetes': 'You may have diabetes. Consult an endocrinologist for diagnosis and treatment.',
-    'Heart Disease': 'Heart disease is serious. Consult a cardiologist for further evaluation.',
-    'Kidney Infection': 'A kidney infection requires medical attention. Seek a doctor immediately.',
-    'Urinary Tract Infection': 'You may have a UTI. See a doctor for treatment and antibiotics.',
-    'Migraine': 'You may have a migraine. Over-the-counter pain relief may help; consult a doctor if frequent.',
-    'Depression': 'Depression is serious. Consult a mental health professional for support.',
-    'Hypertension': 'Hypertension needs management. Consult a doctor for a treatment plan.',
-    'Anemia': 'Anemia is treatable. Consult a doctor for diagnosis and treatment options.',
-    'Appendicitis': 'Appendicitis is an emergency. Seek medical attention immediately.',
-    'Chickenpox': 'Chickenpox is contagious. Rest and consult a doctor if necessary.',
-    'Panic Attack': 'Panic attacks can be managed. Consult a mental health professional for guidance.'
-}
-
-
 replies = {
     'Asthma': 'You may have asthma. Consult your doctor for inhalers and management.',
     'Pneumonia': 'You may have pneumonia. See a doctor for tests and antibiotics.',
