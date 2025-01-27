@@ -1,3 +1,8 @@
+##################################################
+## Questionnaire Style Medical Diagnosis System ##
+##################################################
+
+# Question bank to print and get response from user
 questions = [
     ('1. Have you experienced a sudden increase in body temperature?', 'high_temp'),
     ('2. Are you having difficulty breathing?', 'breathlessness'),
@@ -34,7 +39,7 @@ questions = [
     ('34. Do you feel dizzy or lightheaded?', 'dizziness')
     ]
 
-
+# Diseases and corresponding symptoms functions
 def rule_asthma(symptoms):
     return 'wheezing' in symptoms or 'breathlessness' in symptoms
 
@@ -52,7 +57,6 @@ def rule_stroke(symptoms):
 
 def rule_flu(symptoms):
     return 'high_temp' in symptoms or 'fatigue' in symptoms or 'chills' in symptoms
-
 
 def rule_allergies(symptoms):
     return 'runny_nose' in symptoms or 'sneezing' in symptoms
@@ -90,6 +94,7 @@ def rule_chickenpox(symptoms):
 def rule_panic_attack(symptoms):
     return 'rapid_heartbeat' in symptoms or 'dizziness' in symptoms
 
+# Replies based on the diagnosis
 replies = {
     'Asthma': 'You may have asthma. Consult your doctor for inhalers and management.',
     'Pneumonia': 'You may have pneumonia. See a doctor for tests and antibiotics.',
@@ -132,7 +137,7 @@ replies = {
     'Chickenpox': 'Chickenpox is contagious. Rest and consult a doctor if necessary.',
     'Panic Attack': 'Panic attacks can be managed. Consult a mental health professional for guidance.'
 }
-
+# Function to input yes or no to the questions
 def get_yes_no(question):
     while True:
         answer = input(question + " (y/n): ").strip().lower()
@@ -142,7 +147,7 @@ def get_yes_no(question):
             return False
         else:
             print("Please answer with 'y' or 'n'.")
-
+# Function to create and return a list of symptoms
 def collect_symptoms():
     symptoms = []
     for question, symptom in questions:
@@ -150,13 +155,14 @@ def collect_symptoms():
             symptoms.append(symptom)
     return symptoms
 
+# Welcome message banner
 def welcome_message():
     print("=" * 60)
     print("      Welcome to the Medical Diagnosis System      ")
     print("=" * 60)
     print("  Your health is our priority. Let's get started!  ")
     print("=" * 60)
-
+# Function to diagnose based on symptoms using the rule_disease functions
 def diagnose(symptoms):
     possible_diagnoses = []
     print('\n')
@@ -178,7 +184,7 @@ def diagnose(symptoms):
 
 
         print("=" * 60)
-
+# Start function
 def main():
     welcome_message()
     symptoms = collect_symptoms()
